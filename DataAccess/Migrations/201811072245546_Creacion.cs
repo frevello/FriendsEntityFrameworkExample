@@ -3,7 +3,7 @@ namespace DataAccess.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialWithFluentApiGuidGen : DbMigration
+    public partial class Creacion : DbMigration
     {
         public override void Up()
         {

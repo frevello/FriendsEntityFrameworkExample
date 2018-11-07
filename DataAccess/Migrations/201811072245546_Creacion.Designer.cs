@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialWithFluentApiGuidGen : IMigrationMetadata
+    public sealed partial class Creacion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialWithFluentApiGuidGen));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Creacion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805240126458_InitialWithFluentApiGuidGen"; }
+            get { return "201811072245546_Creacion"; }
         }
         
         string IMigrationMetadata.Source

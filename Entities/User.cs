@@ -13,8 +13,7 @@ namespace Entities
         public string Name { get; set; }
         public int Age { get; set; }
 
-        //public Guid IdAgenda;
-
-        //public Guid IdOwnedAgenda;
+        public virtual Agenda Agenda { get; set; }
+        public virtual ICollection<Agenda> Agendas { get; set; }
     }
 }
