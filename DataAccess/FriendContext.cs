@@ -21,20 +21,15 @@ namespace DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Agenda>()
-                .HasMany(x => x.Contacts)
-                .WithMany(x => x.Agendas)
-                .Map(m =>
-                {
-                    m.ToTable("AgendasDeUsuarios");
-                    m.MapLeftKey("AgendaId");
-                    m.MapRightKey("UsuarioId");
-                });
-
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Agenda>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            modelBuilder.Entity<User>().Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+             modelBuilder.Entity<Agenda>()
+                 .HasMany<User>(x => x.Contacts)
+                 .WithMany(x => x.Agendas)
+                 .Map(m =>
+                 {
+                     m.ToTable("AgendasDeUsuarios");
+                     m.MapLeftKey("AgendaRefId");
+                     m.MapRightKey("UserRefId");
+                 });
         }
     }
 }
